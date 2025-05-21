@@ -40,15 +40,14 @@ Gemini 2.5 Pro与Flash自底向上设计为多模态模型，原生支持文本�
 Gemini 2.5 Flash作为轻量、低成本版本，以极低的计算成本实现了出色性能。在LM Arena排行榜上，其排名仅次于Gemini 2.5 Pro（ELO 1424对1446），但token使用效率提升22%，显著降低延迟[[3]](https://beebom.com/google-unveils-gemini-2-5-pro-deep-think-and-improved-gemini-2-5-flash/)。引入的“思考预算”机制允许开发者细致调控成本、延迟与输出质量之间的权衡，实现资源分配的精细化管理，对大规模部署尤为重要。
 模型定价对比如下：
 
-| Model                 | 输入成本（$/百万tokens） | 输出成本（$/百万tokens） |
-|----------------------|--------------------------|--------------------------|
-| OpenAI GPT-4.5       | $75.00                   | $150.00                  |
-| Claude 3.7 Sonnet    | $3.00                    | $15.00                   |
-| Gemini 2.5 Pro (Std) | $1.25                    | $10.00                   |
-| Gemini 2.5 Pro (Ext) | $2.50                    | $15.00                   |
-| OpenAI o3-mini       | $1.10                    | $4.00                    |
-| Gemini 2.0 Flash     | $0.10                    | $0.00                    |
-
+| Model               | Input Cost ($/M tokens) | Output Cost ($/M tokens) |
+|---------------------|-------------------------|--------------------------|
+| OpenAI GPT-4.5      | $75.00                  | $150.00                  |
+| Claude 3.7 Sonnet   | $3.00                   | $15.00                   |
+| Gemini 2.5 Pro (Std)| $1.25                   | $10.00                   |
+| Gemini 2.5 Pro (Ext)| $2.50                   | $15.00                   |
+| OpenAI o3-mini      | $1.10                   | $4.00                    |
+| Gemini 2.0 Flash    | $0.10                   | $0.00                    |
 
 该表显示，Gemini 2.5 Pro在能力与成本之间实现了极佳平衡，尤其适合需要大上下文窗口或多模态处理的应用[[1]](https://www.helicone.ai/blog/gemini-2.5-full-developer-guide)。对于成本敏感场景，Gemini 2.0 Flash则提供了更实惠的选择，且不牺牲核心功能。
 可扩展性方面，Google底层基础设施（如第七代TPU Ironwood）提供了前所未有的算力，每个pod达42.5 exaflops，性能是前代的10倍。这支持了模型的快速迭代、高吞吐推理，并能为Search、Gemini App、Google Cloud等产品的数亿用户提供服务。
